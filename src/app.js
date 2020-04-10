@@ -65,8 +65,7 @@ app.delete("/repositories/:id", (request, response) => {
 });
 
 app.post("/repositories/:id/like", (request, response) => {
-  // TODO
-  const { id, like } = request.params;
+  const { id } = request.params;
 
   if (!isUuid(id)) {
     return response.status(400).json({ error: "Invalid project ID" });
